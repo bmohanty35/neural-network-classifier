@@ -2,7 +2,7 @@
 
 Here's a step-by-step explanation of my neural network project:
 
-1. Dataset Creation
+## 1. Dataset Creation
 I manually created three binary images (5 rows × 6 columns) to represent the letters A, B, and C using 0s and 1s. These images are flattened into 1D arrays (of length 30) for processing in the neural network.
 
 Each letter is then labeled using one-hot encoding:
@@ -15,10 +15,10 @@ C → [0, 0, 1]
 
 This format is used so the model can learn to output a probability distribution over three possible classes.
 
-2. Visualization
+## 2. Visualization
 To confirm the images look correct, you display the data using a heatmap-style image, where 0s appear as black and 1s as white (or vice versa), allowing you to see the shape of the letter.
 
-3. Neural Network Design
+## 3. Neural Network Design
 I implemented a simple feedforward neural network with:
 
 Input layer: 30 neurons (one for each pixel)
@@ -29,7 +29,7 @@ Output layer: 3 neurons (one for each class: A, B, C)
 
 I used the sigmoid activation function in both hidden and output layers to introduce non-linearity.
 
-4. Forward Propagation
+## 4. Forward Propagation
 This is the process of sending input data through the network:
 
 Multiply the input by weights to get a hidden layer signal.
@@ -40,10 +40,10 @@ Do the same from hidden to output layer.
 
 The final output is a prediction vector like [0.9, 0.05, 0.02].
 
-5. Loss Function
+## 5. Loss Function
 I used mean squared error (MSE) to measure how far the predicted output is from the actual label. This tells the network how "wrong" its prediction is.
 
-6. Backpropagation
+## 6. Backpropagation
 This is the learning step:
 
 It calculates how to adjust the weights to reduce the loss.
@@ -52,7 +52,7 @@ Using the chain rule, it computes gradients (slopes) of the loss with respect to
 
 Then it updates the weights using a small step in the direction that minimizes the loss (controlled by the learning rate alpha).
 
-7. Training Loop
+## 7. Training Loop
 I trained the model for several epochs (training cycles). For each epoch:
 
 The network makes predictions on all training samples.
@@ -63,14 +63,14 @@ The weights are updated via backpropagation.
 
 I store and print the accuracy and average loss.
 
-8. Plotting Results
+## 8. Plotting Results
 After training:
 
 I plot accuracy vs. epochs to see how well the model improves.
 
 I plot loss vs. epochs to confirm the model is learning (loss should decrease).
 
-9. Prediction Function
+## 9. Prediction Function
 I wrote a function to test the trained model:
 
 It takes an image input.
