@@ -81,5 +81,5 @@ It identifies the class with the highest score and prints whether it’s A, B, o
 
 Then it displays the image again.
 
-10. Weights Initialization
+## 10. Weights Initialization
 Before training, I randomly initialized the weights connecting input → hidden and hidden → output layers. This is necessary to break symmetry and allow learning.
